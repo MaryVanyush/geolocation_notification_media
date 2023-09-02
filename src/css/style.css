@@ -1,0 +1,246 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	/* line-height: 1,5; */
+    margin: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+.modal{
+    position: absolute;
+    background-color: rgb(164, 190, 162);
+    box-shadow: 5px 3px 3px rgba(63, 60, 60, 0.507);
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    margin-left: -200px;
+    margin-top: -250px;
+    border-radius: 8px;
+    border: none;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.info{
+    margin-bottom: 20px;
+}
+
+.geolocate-coordinates{
+    width: 97%;
+    height: 20px;
+    padding: 10px 6px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    color: rgb(63, 60, 60);
+    border-radius: 8px; 
+    margin-bottom: 30px;
+}
+
+.modal-button {
+    width: 35%;
+    height: 40px;
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    color: rgb(63, 60, 60);
+    border-radius: 8px; 
+    box-shadow: 5px 3px 3px rgba(63, 60, 60, 0.507);
+    cursor: pointer;
+    align-self: center;
+}
+
+.error{
+    color: red;
+    margin-bottom: 5px;
+}
+
+.container{
+    background-image: url("../images/background-green.jpg");
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.chat-widget{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.chat-box{
+    margin: 20px auto;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.301);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.messages-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow: auto;
+}
+
+.video-window{
+    position: absolute;
+    bottom: 20%;
+    right: 50%;
+    width: 500px;
+    margin-right: -250px;
+    z-index: 3;
+}
+
+.message{
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 18px 20px;
+}
+
+.message-data{
+    min-width: 90px;
+    margin-left: 20px;
+    font-size: 12px;
+    color: rgb(90, 87, 87);
+}
+
+.message-video{
+    max-width: 450px;
+}
+
+.message-geo{
+    margin: 15px;
+
+    font-size: 12px;
+    color: rgb(90, 87, 87);
+}
+
+.geo-icon{
+    margin-left: 10px;
+    width: 10px;
+    height: 15px;
+    opacity: .6;
+}
+
+.message-input-box{
+    display: flex;
+    align-self: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.message-input{
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border: none;
+    font-family: Roboto,Noto Sans,Ubuntu,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 16px;
+    color: rgb(63, 60, 60);
+    width: 100%;
+}
+
+.record{
+    margin-left: 8px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.record-audio{
+    background-image: url("../images/microphone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.record-video{
+    background-image: url("../images/video.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.record-send{
+    background-image: url("../images/send.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.record-cancel{
+    background-image: url("../images/basket.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.timer{
+    position: absolute;
+    font-size: 20px;
+    right: 200px;
+    bottom: 50px;
+}
+
+.hide{
+    display: none;
+}

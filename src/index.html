@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation, Notification, Media</title>
+</head>
+<body>
+    <div class="modal-geolocate hide modal">
+        <p class="geolocate-info info">Что-то пошло не так</p>
+        <p class="geolocate-info info">К сожалению, нам не удалось определить ваше местоположение, пожалуйста, дайте разрешение на использование геолокации, либо введите координаты вручную.</p>
+        <p class="geolocate-info info">Широта и долгота через запятую</p>
+        <form class="geolocate-form">
+            <input class="geolocate-coordinates" type="text">
+            <div class="error hide">Некорректный формат координат</div>
+            <button class="geolocate-button submit modal-button" type="submit">Продолжить</button>
+            <button class="geolocate-button cancel modal-button">Отменить</button>
+        </form>
+    </div>
+    <div class="modal-error-media hide modal">
+        <p class="error-media-info info">Что-то пошло не так</p>
+        <p class="error-media-info info">Необходимо выдать разрешение на использование медиаустройств для записи аудио и видео, или используйте другой браузер.</p>
+        <button class="error-media-button modal-button">Продолжить</button>
+    </div>
+    <main class="container">
+        <div class="chat-widget">
+            <div class="chat-box">
+                <div class="messages-box">
+                    <video class="video-window hide" muted></video>
+                </div>
+                
+                <div class="message-input-box">
+                    <input class="message-input" type="text">
+                    <button class="record-audio record"></button>
+                    <button class="record-video record"></button>
+                    <button class="record-send record hide"></button>
+                    <button class="record-cancel record hide"></button>
+                    <div class="timer hide">00:00</div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
